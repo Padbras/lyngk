@@ -15,6 +15,11 @@ LyngkTestCase.prototype.testHistoireDeux = function(){
 };
 
 LyngkTestCase.prototype.testHistoireTrois = function(){
+    var coord = new Lyngk.Coordinates("B", 2);
+    assertTrue(coord.toString() === "B2");
+};
+
+LyngkTestCase.prototype.testHistoireQuatre = function(){
     var coord = new Lyngk.Coordinates("A", 1);
-    assertTrue(coord.toString() === "A1");
+    assertTrue(coord.toString() === "invalid");
 };
