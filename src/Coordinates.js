@@ -12,4 +12,15 @@ Lyngk.Coordinates = function (c, l) {
         return (coordValides[c.charCodeAt(0) - 'A'.charCodeAt(0)][0] < l && l < coordValides[c.charCodeAt(0) - 'A'.charCodeAt(0)][1]);
     };
 
+    this.sommeCoord = function()
+    {
+        var somme = 0;
+        for(var i in coordValides)
+        {
+          somme += coordValides[i][1] - coordValides[i][0] + 1;
+        }
+        return somme;
+    }
+
+
 };

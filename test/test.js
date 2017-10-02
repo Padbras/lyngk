@@ -13,3 +13,4 @@ LyngkTestCase.prototype.testHistoireDeux = function(){
     var somme = coord.sommeCoord();
     assertTrue(somme  == 43);
 };
+

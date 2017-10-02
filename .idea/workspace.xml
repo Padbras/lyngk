@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f506860d-029c-4c7b-b0ed-d6abeea88d1b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Coordinates.js" afterPath="$PROJECT_DIR$/src/Coordinates.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test.js" afterPath="$PROJECT_DIR$/test/test.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -30,8 +31,8 @@
       <file leaf-file-name="Coordinates.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Coordinates.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -50,8 +51,8 @@
       <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -291,32 +292,11 @@
       <workItem from="1506244007400" duration="117000" />
       <workItem from="1506930574783" duration="361000" />
       <workItem from="1506930953124" duration="10000" />
-      <workItem from="1506930978719" duration="6024000" />
+      <workItem from="1506930978719" duration="6385000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tests - 2017.10.02 at 11h 23m 15s.xml">
-      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
-    </history-entry>
-    <history-entry file="Tests - 2017.10.02 at 11h 24m 05s.xml">
-      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
-    </history-entry>
-    <history-entry file="Tests - 2017.10.02 at 11h 24m 58s.xml">
-      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
-    </history-entry>
-    <history-entry file="Tests - 2017.10.02 at 11h 25m 47s.xml">
-      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
-    </history-entry>
-    <history-entry file="Tests - 2017.10.02 at 11h 26m 26s.xml">
-      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
-    </history-entry>
-    <history-entry file="Tests - 2017.10.02 at 11h 26m 33s.xml">
-      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
-    </history-entry>
-    <history-entry file="Tests - 2017.10.02 at 11h 26m 44s.xml">
-      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
-    </history-entry>
     <history-entry file="Tests - 2017.10.02 at 11h 28m 03s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
@@ -326,9 +306,30 @@
     <history-entry file="Tests - 2017.10.02 at 11h 39m 30s.xml">
       <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
     </history-entry>
+    <history-entry file="Tests - 2017.10.02 at 11h 44m 45s.xml">
+      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
+    </history-entry>
+    <history-entry file="Tests - 2017.10.02 at 11h 44m 54s.xml">
+      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
+    </history-entry>
+    <history-entry file="Tests - 2017.10.02 at 11h 45m 08s.xml">
+      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
+    </history-entry>
+    <history-entry file="Tests - 2017.10.02 at 11h 45m 16s.xml">
+      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
+    </history-entry>
+    <history-entry file="Tests - 2017.10.02 at 11h 45m 30s.xml">
+      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
+    </history-entry>
+    <history-entry file="Tests - 2017.10.02 at 11h 45m 36s.xml">
+      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
+    </history-entry>
+    <history-entry file="Tests - 2017.10.02 at 11h 45m 39s.xml">
+      <configuration name="Tests" configurationId="JsTestDriver-test-runner" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23033000" />
+    <option name="totallyTimeSpent" value="23394000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="31" width="1922" height="1004" extended-state="6" />
@@ -453,18 +454,18 @@
     <entry file="file://$PROJECT_DIR$/src/Piece.js" />
     <entry file="file://$PROJECT_DIR$/src/Intersection.js" />
     <entry file="file://$PROJECT_DIR$/src/Engine.js" />
-    <entry file="file://$PROJECT_DIR$/jsTestDriver.conf">
+    <entry file="file://$PROJECT_DIR$/src/Coordinates.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="289">
+          <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Coordinates.js">
+    <entry file="file://$PROJECT_DIR$/jsTestDriver.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -479,8 +480,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="221">
+          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
           <folding />
         </state>
       </provider>
