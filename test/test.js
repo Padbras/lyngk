@@ -31,8 +31,8 @@ LyngkTestCase.prototype.testHistoireCinq = function(){
 };
 
 LyngkTestCase.prototype.testHistoireSix = function(){
-    var coord = new Lyngk.Coordinates("A", 1);
+    var coord = new Lyngk.Coordinates("C", 4);
     var testHash = coord.hash();
-    assertTrue(testHash == 11 );
+    assertTrue(testHash == 34 );
 };
 

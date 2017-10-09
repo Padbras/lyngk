@@ -50,4 +50,9 @@ Lyngk.Coordinates = function (c, l) {
     this.get_l = function() {
         return private_l;
     }
+
+    this.hash = function()
+    {
+        return "" + (private_c.charCodeAt(0)-64) + private_l;
+    }
 };
