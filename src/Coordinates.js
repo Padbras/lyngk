@@ -9,7 +9,7 @@ Lyngk.Coordinates = function (c, l) {
 
     this.valide = function()
     {
-        return (coordValides[c.charCodeAt(0) - 'A'.charCodeAt(0)][0] < l && l < coordValides[c.charCodeAt(0) - 'A'.charCodeAt(0)][1]);
+        return (coordValides[c.charCodeAt(0) - 'A'.charCodeAt(0)][0] <= l && l <= coordValides[c.charCodeAt(0) - 'A'.charCodeAt(0)][1]);
     };
 
     this.sommeCoord = function()
@@ -24,7 +24,10 @@ Lyngk.Coordinates = function (c, l) {
 
     this.toString = function()
     {
-        return ""+ c + l;
+        if(this.valide() == false)
+            return "invalid";
+        else return ""+ c + l;
+
     }
 
 };
