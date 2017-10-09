@@ -30,4 +30,9 @@ LyngkTestCase.prototype.testHistoireCinq = function(){
     assertTrue(coord.comparaison(coord2) == true);
 };
 
+LyngkTestCase.prototype.testHistoireSix = function(){
+    var coord = new Lyngk.Coordinates("A", 1);
+    var testHash = coord.hash();
+    assertTrue(testHash == 11 );
+};
 
