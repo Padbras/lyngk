@@ -22,8 +22,8 @@ Lyngk.Intersection = function () {
         private_color = couleur;
         if(private_etat === Lyngk.State.VACANT )
              private_etat = Lyngk.State.ONE_PIECE;
-        //else if(private_etat === Lyngk.State.ONE_PIECE)
-        //     private_etat = Lyngk.State.STACK;
+        else if(private_etat === Lyngk.State.ONE_PIECE)
+             private_etat = Lyngk.State.STACK;
     }
 
 };
