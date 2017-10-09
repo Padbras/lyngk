@@ -25,7 +25,9 @@ LyngkTestCase.prototype.testHistoireQuatre = function(){
 };
 
 LyngkTestCase.prototype.testHistoireCinq = function(){
-    var coord = new Lyngk.Coordinates("A", 1);
+    var coord = new Lyngk.Coordinates("C", 3);
     var coord2 = coord.clonage();
-    assertTrue(coord2 === coord);
+    assertTrue(coord.comparaison(coord2) == true);
 };
+
+

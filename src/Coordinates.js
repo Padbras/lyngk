@@ -30,4 +30,24 @@ Lyngk.Coordinates = function (c, l) {
 
     }
 
+    this.clonage = function()
+    {
+
+        return new Lyngk.Coordinates(private_c, private_l);
+    }
+
+    this.comparaison = function(coord) {
+
+        if(private_c === coord.get_c() && private_l === coord.get_l())
+            return true;
+        else return false;
+    }
+
+    this.get_c = function() {
+        return private_c;
+    }
+
+    this.get_l = function() {
+        return private_l;
+    }
 };
