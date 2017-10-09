@@ -63,3 +63,15 @@ LyngkTestCase.prototype.testHistoireDix = function(){
     inter.placerPion(Lyngk.Color.GREEN);
     assertTrue(inter.get_color() === Lyngk.Color.GREEN && inter.get_etat() === Lyngk.State.FULL_STACK);
 };
+
+
+LyngkTestCase.prototype.testHistoireOnze = function(){
+    var jeu = new Lyngk.Engine();
+    var flag = true;
+    for(var i in plateau)
+    {
+        if(plateau[i].get_etat() !=  Lyngk.State.ONE_PIECE)
+            flag = false;
+    }
+    assertTrue(flag);
+};
