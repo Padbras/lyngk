@@ -53,6 +53,7 @@ Lyngk.Coordinates = function (c, l) {
 
     this.hash = function()
     {
-        return "" + (private_c.charCodeAt(0)-64) + private_l;
+       var hashage = parseInt("" + (private_c.charCodeAt(0)-64) + private_l) ;
+       return hashage;
     }
 };
