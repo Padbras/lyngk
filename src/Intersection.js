@@ -5,10 +5,22 @@ Lyngk.State = {VACANT: 0, ONE_PIECE: 1, STACK: 2, FULL_STACK: 3};
 Lyngk.Intersection = function () {
 
    var private_etat = Lyngk.State.VACANT;
+   var private_color;
 
     this.get_etat = function()
     {
         return private_etat;
+    }
+
+    this.get_color = function()
+    {
+        return private_color;
+    }
+
+    this.placerPion = function(couleur)
+    {
+        private_color = couleur;
+        private_etat = Lyngk.State.ONE_PIECE;
     }
 
 };
