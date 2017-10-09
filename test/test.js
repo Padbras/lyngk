@@ -36,3 +36,7 @@ LyngkTestCase.prototype.testHistoireSix = function(){
     assertTrue(testHash == 34 );
 };
 
+LyngkTestCase.prototype.testHistoireSept = function(){
+    var inter = new Lyngk.Intersection();
+    assertTrue(inter.get_etat() == Lyngk.State.VACANT);
+};
