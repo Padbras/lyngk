@@ -24,7 +24,7 @@ Lyngk.Coordinates = function (c, l) {
 
     this.toString = function()
     {
-        if(this.valide() == false)
+        if(this.valide() === false)
             return "invalid";
         else return ""+ c + l;
 
