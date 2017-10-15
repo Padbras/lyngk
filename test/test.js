@@ -68,9 +68,9 @@ LyngkTestCase.prototype.testHistoireDix = function(){
 LyngkTestCase.prototype.testHistoireOnze = function(){
     var jeu = new Lyngk.Engine();
     var flag = true;
-    for(var i in plateau)
+    for(var i in jeu.plateau)
     {
-        if(plateau[i].get_etat() !=  Lyngk.State.ONE_PIECE)
+        if(jeu.plateau[i].get_etat() !=  Lyngk.State.ONE_PIECE)
             flag = false;
     }
     assertTrue(flag);
