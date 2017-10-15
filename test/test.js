@@ -75,3 +75,21 @@ LyngkTestCase.prototype.testHistoireOnze = function(){
     }
     assertTrue(flag);
 };
+
+
+LyngkTestCase.prototype.testHistoireDouze = function(){
+    var jeu = new Lyngk.Engine();
+    var flag = true;
+    var cptCouleur = [0,0,0,0,0];
+    var couleurAttendue = [8,8,8,8,3];
+    for(var i in jeu.plateau)
+    {
+       cptCouleur[jeu.plateau[i].get_color()]++;
+    }
+    for(var j in cptCouleur)
+    {
+        if(cptCouleur[j] !== couleurAttendue[j])
+            flag = false;
+    }
+    assertTrue(flag);
+};
