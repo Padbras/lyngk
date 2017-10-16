@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/lyngk.iml" filepath="$PROJECT_DIR$/.idea/lyngk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lyngk.iml" filepath="$PROJECT_DIR$/lyngk.iml" />
     </modules>
   </component>
 </project>

@@ -1,4 +1,5 @@
 "use strict";
+Lyngk.CoordValides = [[3,3],[2,5],[1,7],[2,7],[2,8],[3,8],[3,9],[5,8],[7,7]];
 
 Lyngk.coordValides = [[3,3],[2,5],[1,7],[2,7],[2,8],[3,8],[3,9],[5,8],[7,7]];
 
@@ -11,22 +12,32 @@ Lyngk.Coordinates = function (c, l) {
 
     this.valide = function()
     {
+<<<<<<< HEAD
         return (Lyngk.coordValides[c.charCodeAt(0) - 'A'.charCodeAt(0)][0] <= l && l <= Lyngk.coordValides[c.charCodeAt(0) - 'A'.charCodeAt(0)][1]);
+=======
+        return (Lyngk.CoordValides[c.charCodeAt(0) - 'A'.charCodeAt(0)][0] <= l && l <= Lyngk.CoordValides[c.charCodeAt(0) - 'A'.charCodeAt(0)][1]);
+>>>>>>> refs/remotes/origin/master
     };
 
     this.sommeCoord = function()
     {
         var somme = 0;
+<<<<<<< HEAD
         for(var i in Lyngk.coordValides)
         {
           somme += Lyngk.coordValides[i][1] - Lyngk.coordValides[i][0] + 1;
+=======
+        for(var i in Lyngk.CoordValides)
+        {
+          somme += Lyngk.CoordValides[i][1] - Lyngk.CoordValides[i][0] + 1;
+>>>>>>> refs/remotes/origin/master
         }
         return somme;
     }
 
     this.toString = function()
     {
-        if(this.valide() == false)
+        if(this.valide() === false)
             return "invalid";
         else return ""+ c + l;
 

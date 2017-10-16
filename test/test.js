@@ -67,11 +67,34 @@ LyngkTestCase.prototype.testHistoireDix = function(){
 
 LyngkTestCase.prototype.testHistoireOnze = function(){
     var jeu = new Lyngk.Engine();
-    var flag = true;
-    for(var i in plateau)
+    var flag = false;
+    if(jeu.getCase(0).get_etat() ===  Lyngk.State.ONE_PIECE)
+        flag = true;
+    for(var i = 0 ; i < jeu.getTaille(); i++)
     {
-        if(plateau[i].get_etat() !=  Lyngk.State.ONE_PIECE)
+        if(jeu.getCase(i).get_etat() !==  Lyngk.State.ONE_PIECE)
             flag = false;
     }
     assertTrue(flag);
 };
+
+
+LyngkTestCase.prototype.testHistoireDouze = function(){
+    var jeu = new Lyngk.Engine();
+    var flag = true;
+    var cptCouleur = [0,0,0,0,0,0];
+    var couleurAttendue = [8,8,8,8,8,3];
+
+    jeu.getCase(0).placerPion(Lyngk.Color.BLUE);
+    for(var i = 0 ; i < jeu.getTaille(); i++)
+        cptCouleur[jeu.getCase(i).get_color()]++;
+
+   // console.log(jeu.getCase(i).get_color());
+    for(var j in cptCouleur)
+    {
+        if(cptCouleur[j] !== couleurAttendue[j])
+            flag = false;
+    }
+    assertTrue(flag);
+};
+
