@@ -8,6 +8,12 @@ Lyngk.Intersection = function (coord) {
    var private_color;
    var private_nbPions = 0;
    var private_coord = coord;
+   var private_pile = [];
+
+   this.get_couleur_pile = function()
+   {
+       return private_pile[private_nbPions-1];
+   }
 
    this.get_taille_pile = function()
    {
@@ -34,6 +40,7 @@ Lyngk.Intersection = function (coord) {
              private_etat = Lyngk.State.ONE_PIECE;
         else if(private_etat === Lyngk.State.ONE_PIECE)
              private_etat = Lyngk.State.STACK;
+        private_pile[private_nbPions-1] = couleur;
 
     }
 
