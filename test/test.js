@@ -85,7 +85,6 @@ LyngkTestCase.prototype.testHistoireDouze = function(){
     var cptCouleur = [0,0,0,0,0,0];
     var couleurAttendue = [8,8,8,8,8,3];
 
-    jeu.getCase(0).placerPion(Lyngk.Color.BLUE);
     for(var i = 0 ; i < jeu.getTaille(); i++)
         cptCouleur[jeu.getCase(i).get_color()]++;
 
