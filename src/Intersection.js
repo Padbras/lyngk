@@ -10,6 +10,25 @@ Lyngk.Intersection = function (coord) {
    var private_coord = coord;
    var private_pile = [];
 
+   this.pop_pile = function () {
+       private_pile.pop();
+
+   }
+
+   this.push_pile = function (element) {
+       private_pile.push(element);
+   }
+
+   this.get_pile= function(i)
+   {
+       return private_pile[i];
+   }
+
+   this.get_coord = function()
+   {
+        return private_coord;
+   }
+
    this.get_couleur_pile = function()
    {
        return private_pile[private_nbPions-1];

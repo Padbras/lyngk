@@ -60,6 +60,28 @@ Lyngk.Engine = function () {
 
 
     }
+
+    this.get_case_coord = function(c) // Refondre avec le hashcode (hashcode = indice tab) refaire le hashcode
+    {
+        for(var i in plateau)
+        {
+            if(plateau[i].get_coord().toString() === c)
+                return plateau[i];
+        }
+    }
+
+    this.deplacer_pion = function(src, dest)
+    {
+        var source = this.get_case_coord(src); //plateau[i]
+        var destination = this.get_case_coord(dest); // plateau[j]
+
+        var tmp =source.get_pile(source.get_taille_pile()-1);
+        source.pop_pile();
+        destination.push_pile(tmp);
+
+
+    }
+
     this.getCase = function(i) {
         return plateau[i];
     }
