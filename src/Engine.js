@@ -31,7 +31,6 @@ Lyngk.Engine = function () {
     }
 
 
-
     this.getTaille = function()
     {
         return plateau.length;
