@@ -1,6 +1,9 @@
 "use strict";
 Lyngk.CoordValides = [[3,3],[2,5],[1,7],[2,7],[2,8],[3,8],[3,9],[5,8],[7,7]];
 
+Lyngk.coordValides = [[3,3],[2,5],[1,7],[2,7],[2,8],[3,8],[3,9],[5,8],[7,7]];
+
+
 Lyngk.Coordinates = function (c, l) {
 
     var private_c = c;
@@ -9,12 +12,13 @@ Lyngk.Coordinates = function (c, l) {
 
     this.valide = function()
     {
-        return (Lyngk.CoordValides[c.charCodeAt(0) - 'A'.charCodeAt(0)][0] <= l && l <= Lyngk.CoordValides[c.charCodeAt(0) - 'A'.charCodeAt(0)][1]);
+        return (Lyngk.coordValides[c.charCodeAt(0) - 'A'.charCodeAt(0)][0] <= l && l <= Lyngk.coordValides[c.charCodeAt(0) - 'A'.charCodeAt(0)][1]);
     };
 
     this.sommeCoord = function()
     {
         var somme = 0;
+
         for(var i in Lyngk.CoordValides)
         {
           somme += Lyngk.CoordValides[i][1] - Lyngk.CoordValides[i][0] + 1;
