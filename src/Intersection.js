@@ -17,7 +17,7 @@ Lyngk.Intersection = function (coord) {
            private_etat = Lyngk.State.VACANT;
 
    }
-    
+
 
    this.get_pile= function(i)
    {
