@@ -12,12 +12,12 @@ Lyngk.Intersection = function (coord) {
 
    this.pop_pile = function () {
        private_pile.pop();
+       private_nbPions--;
+       if(private_nbPions === 0)
+           private_etat = Lyngk.State.VACANT;
 
    }
-
-   this.push_pile = function (element) {
-       private_pile.push(element);
-   }
+    
 
    this.get_pile= function(i)
    {
@@ -51,6 +51,7 @@ Lyngk.Intersection = function (coord) {
 
     this.placerPion = function(couleur)
     {
+        private_pile.push(couleur);
         private_color = couleur;
         private_nbPions++;
         if(private_nbPions == 5)
@@ -59,7 +60,7 @@ Lyngk.Intersection = function (coord) {
              private_etat = Lyngk.State.ONE_PIECE;
         else if(private_etat === Lyngk.State.ONE_PIECE)
              private_etat = Lyngk.State.STACK;
-        private_pile[private_nbPions-1] = couleur;
+
 
     }
 

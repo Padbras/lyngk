@@ -14,14 +14,18 @@ Lyngk.Engine = function () {
 
         for(var i in Lyngk.CoordValides)
             if(Lyngk.CoordValides[i][1] === Lyngk.CoordValides[i][0])
-                tabCoordValid.push(new Lyngk.Coordinates(String.fromCharCode(i+65),Lyngk.CoordValides[i][1]));
-            else if(Lyngk.CoordValides[i][1] !== Lyngk.CoordValides[i][0])
+            {
+
+                tabCoordValid.push(new Lyngk.Coordinates(String.fromCharCode(parseInt(i)+65),Lyngk.CoordValides[i][1]));
+            }
+
+            else
             {
                 var tmp = Lyngk.CoordValides[i][0];
+
                 while(tmp <= Lyngk.CoordValides[i][1])
                 {
-                    tabCoordValid.push(new Lyngk.Coordinates(String.fromCharCode(i+65),tmp));
-
+                    tabCoordValid.push(new Lyngk.Coordinates(String.fromCharCode(parseInt(i)+65),tmp));
                     tmp++;
                 }
 
@@ -38,7 +42,12 @@ Lyngk.Engine = function () {
 
     var initPlateau = function () {
         for(var i in tabCoordValid)
+        {
             plateau.push(new Lyngk.Intersection(tabCoordValid[i]));
+
+        }
+
+
     }
 
     var remplirPlateau = function()
@@ -74,10 +83,9 @@ Lyngk.Engine = function () {
     {
         var source = this.get_case_coord(src); //plateau[i]
         var destination = this.get_case_coord(dest); // plateau[j]
-
         var tmp =source.get_pile(source.get_taille_pile()-1);
         source.pop_pile();
-        destination.push_pile(tmp);
+        destination.placerPion(tmp);
 
 
     }
