@@ -87,14 +87,17 @@ Lyngk.Engine = function () {
 
         var tmp =source.get_full_pile(); // pile de plateau de [i]
 
-        for(var i = 0; i<tmp.length; i++)
+        if(destination.get_taille_pile() !== 0)
         {
-            destination.placerPion(tmp[i]);
-        }
+            for(var i = 0; i<tmp.length; i++)
+            {
+                destination.placerPion(tmp[i]);
+            }
 
-        while(source.get_taille_pile() !== 0)
-        {
-            source.pop_pile();
+            while(source.get_taille_pile() !== 0)
+            {
+                source.pop_pile();
+            }
         }
 
     };
