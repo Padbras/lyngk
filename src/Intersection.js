@@ -18,6 +18,11 @@ Lyngk.Intersection = function (coord) {
 
    }
 
+   this.set_color = function(couleur)
+   {
+       private_color = couleur;
+   }
+
    this.pile_toString = function()
    {
     for(var i = 0; i < this.get_taille_pile(); i++)

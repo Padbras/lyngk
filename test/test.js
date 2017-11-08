@@ -199,3 +199,35 @@ LyngkTestCase.prototype.testHistoireVingtDeux = function(){
     jeu.deplacer_pion("H6","G6");
     assertTrue(jeu.get_case_coord("H6").get_color() === couleurH6 && jeu.get_case_coord("G6").get_color() === couleurG6 && jeu.get_case_coord("H6").get_taille_pile() === tailleH6 && jeu.get_case_coord("G6").get_taille_pile() === tailleG6);
 };
+
+
+LyngkTestCase.prototype.testHistoireVingtDeux = function(){
+    var jeu = new Lyngk.Engine();
+    jeu.deplacer_pion("I7","H6");
+    jeu.deplacer_pion("G4","G5");
+    jeu.deplacer_pion("G5","G6");
+    var couleurH6 = jeu.get_case_coord("H6").get_color();
+    var tailleH6 = jeu.get_case_coord("H6").get_taille_pile();
+    var couleurG6 = jeu.get_case_coord("G6").get_color();
+    var tailleG6 = jeu.get_case_coord("G6").get_taille_pile();
+    jeu.deplacer_pion("H6","G6");
+    assertTrue(jeu.get_case_coord("H6").get_color() === couleurH6 && jeu.get_case_coord("G6").get_color() === couleurG6 && jeu.get_case_coord("H6").get_taille_pile() === tailleH6 && jeu.get_case_coord("G6").get_taille_pile() === tailleG6);
+};
+
+LyngkTestCase.prototype.testHistoireVingtTrois = function(){
+    var jeu = new Lyngk.Engine();
+    jeu.get_case_coord("C1").set_color(Lyngk.Color.BLUE); // On met deux fois la même couleur pour voir que ça ne marche pas
+    jeu.get_case_coord("C2").set_color(Lyngk.Color.WHITE); // Et deux blancs pour vérifier que ça marche
+    jeu.get_case_coord("C3").set_color(Lyngk.Color.WHITE);
+    jeu.get_case_coord("C4").set_color(Lyngk.Color.BLUE);
+    jeu.get_case_coord("C5").set_color(Lyngk.Color.GREEN);
+    jeu.deplacer_pion("C1","C2");
+    jeu.deplacer_pion("C2","C3");
+    jeu.deplacer_pion("C3","C4");
+    jeu.deplacer_pion("C4","C5");
+    var couleurC3 = jeu.get_case_coord("C3").get_color(); // On doit obtenir une couleur BLUE
+    var tailleC3 = jeu.get_case_coord("C3").get_taille_pile(); // La taille doit être de 3 (coup suivant ignoré)
+    var couleurC5 = jeu.get_case_coord("C5").get_color(); // On doit obtenir une couleur BLUE
+    var tailleC5 = jeu.get_case_coord("C5").get_taille_pile(); // La taille doit être de 2, comme un coup a été ignoré
+    assertTrue(couleurC3 === Lyngk.Color.BLUE && couleurC5 === Lyngk.Color.BLUE && tailleC3 === 3 && tailleC5 === 2);
+};
