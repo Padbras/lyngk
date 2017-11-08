@@ -116,7 +116,7 @@ Lyngk.Engine = function () {
 
         var tmp =source.get_full_pile(); // pile de plateau de [i]
 
-        if(destination.get_taille_pile() !== 0 && this.coup_valide(src, dest) === true)
+        if(destination.get_taille_pile() !== 0 && this.coup_valide(src, dest) === true && (source.get_taille_pile() + destination.get_taille_pile())<=5)
         {
             for(var i = 0; i<tmp.length; i++)
             {
