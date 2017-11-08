@@ -13,6 +13,8 @@ Lyngk.Engine = function () {
     var tour_joueur = Lyngk.Joueurs.JoueurUn;
     var tabReclamJ1 = [];
     var tabReclamJ2 = [];
+    var ScoreJ1 = 0;
+    var ScoreJ2 = 0;
 
 
 
