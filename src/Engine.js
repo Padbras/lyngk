@@ -82,13 +82,22 @@ Lyngk.Engine = function () {
     this.deplacer_pion = function(src, dest)
     {
         var source = this.get_case_coord(src); //plateau[i]
-        var destination = this.get_case_coord(dest); // plateau[j]
-        var tmp =source.get_pile(source.get_taille_pile()-1);
-        source.pop_pile();
-        destination.placerPion(tmp);
 
+        var destination = this.get_case_coord(dest); //plateau[j]
 
-    }
+        var tmp =source.get_full_pile(); // pile de plateau de [i]
+
+        for(var i = 0; i<tmp.length; i++)
+        {
+            destination.placerPion(tmp[i]);
+        }
+
+        while(source.get_taille_pile() !== 0)
+        {
+            source.pop_pile();
+        }
+        
+    };
 
     this.getCase = function(i) {
         return plateau[i];

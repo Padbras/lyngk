@@ -18,6 +18,17 @@ Lyngk.Intersection = function (coord) {
 
    }
 
+   this.pile_toString = function()
+   {
+    for(var i = 0; i < this.get_taille_pile(); i++)
+        console.log(this.get_pile(i));
+   };
+
+   this.get_full_pile = function()
+    {
+        return private_pile;
+    }
+
 
    this.get_pile= function(i)
    {
