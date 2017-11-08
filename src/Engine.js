@@ -9,6 +9,9 @@ Lyngk.Engine = function () {
     var plateau = [];
     var j = 0;
     var tabCoordValid = [];
+    var tour_joueur = 1;
+
+
 
     var good_coord = function () {
 
@@ -33,6 +36,8 @@ Lyngk.Engine = function () {
 
 
     }
+
+
 
 
     this.getTaille = function()
@@ -77,6 +82,11 @@ Lyngk.Engine = function () {
             if(plateau[i].get_coord().toString() === c)
                 return plateau[i];
         }
+    }
+
+    this.whose_turn = function()
+    {
+        return tour_joueur;
     }
 
     this.coup_valide = function (src, dest)

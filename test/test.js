@@ -236,8 +236,8 @@ LyngkTestCase.prototype.testHistoireVingtTrois = function(){
 
 LyngkTestCase.prototype.testHistoireVingtQuatre = function(){
     var jeu = new Lyngk.Engine();
-    var joueur1 = new Joueur();
-    var joueur2 = new Joueur();
+    var joueur1 = new Lyngk.Joueur(1);
+    var joueur2 = new Lyngk.Joueur(2);
     assertTrue(jeu.whose_turn() === 1);
 };
 
