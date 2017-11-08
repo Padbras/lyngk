@@ -236,15 +236,12 @@ LyngkTestCase.prototype.testHistoireVingtTrois = function(){
 
 LyngkTestCase.prototype.testHistoireVingtQuatre = function(){
     var jeu = new Lyngk.Engine();
-
     assertTrue(jeu.whose_turn() === 1);
 };
 
 
-LyngkTestCase.prototype.testHistoireVingtQuatre = function(){
+LyngkTestCase.prototype.testHistoireVingtCinq = function(){
     var jeu = new Lyngk.Engine();
-    var joueur1 = new Lyngk.Joueur(1);
-    var joueur2 = new Lyngk.Joueur(2);
-    joueur1.jouer_coup("B2","B3");
+    jeu.coup_joueur("B2","B3");
     assertTrue(jeu.whose_turn() === 2);
 };

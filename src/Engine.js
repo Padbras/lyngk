@@ -2,6 +2,7 @@
 
 // enums definition
 Lyngk.Color = {BLACK: 0, IVORY: 1, BLUE: 2, RED: 3, GREEN: 4, WHITE: 5};
+Lyngk.Joueurs = {JoueurUn : 1, JoueurDeux : 2}
 
 Lyngk.Engine = function () {
 
@@ -9,7 +10,7 @@ Lyngk.Engine = function () {
     var plateau = [];
     var j = 0;
     var tabCoordValid = [];
-    var tour_joueur = 1;
+    var tour_joueur = Lyngk.Joueurs.JoueurUn;
 
 
 
@@ -133,6 +134,15 @@ Lyngk.Engine = function () {
 
 
     }
+
+    this.coup_joueur = function(src,dest)
+    {
+        this.deplacer_pion(src, dest);
+
+        if(tour_joueur === Lyngk.Joueurs.JoueurUn)
+            tour_joueur = Lyngk.Joueurs.JoueurDeux;
+        else tour_joueur = Lyngk.Joueurs.JoueurUn;
+    }
 /*
     this.couleur_coup_valide = function(src, dest)
     {
@@ -193,15 +203,5 @@ Lyngk.Engine = function () {
     initPlateau();
     remplirPlateau();
 
-
-    Lyngk.Joueur = function (num) {
-
-        var private_id = num;
-
-       /* this.jouer_coup = function(src, dest)
-        {
-            jeu.deplacer_pion(src, dest);
-        }*/
-    };
 
 };
