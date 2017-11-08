@@ -11,6 +11,8 @@ Lyngk.Engine = function () {
     var j = 0;
     var tabCoordValid = [];
     var tour_joueur = Lyngk.Joueurs.JoueurUn;
+    var tabReclamJ1 = [];
+    var tabReclamJ2 = [];
 
 
 
@@ -39,6 +41,12 @@ Lyngk.Engine = function () {
     }
 
 
+    this.get_tableau_reclam = function(joueur, indice)
+    {
+        if(joueur === Lyngk.Joueurs.JoueurUn)
+            return tabReclamJ1[indice];
+        else return tabReclamJ2[indice];
+    }
 
 
     this.getTaille = function()
@@ -142,6 +150,26 @@ Lyngk.Engine = function () {
         if(tour_joueur === Lyngk.Joueurs.JoueurUn)
             tour_joueur = Lyngk.Joueurs.JoueurDeux;
         else tour_joueur = Lyngk.Joueurs.JoueurUn;
+    }
+
+    this.reclamer_couleur = function(joueur, couleur)
+    {
+        for(var i in tabReclamJ1)
+        {
+            if(tabReclamJ1[i] === couleur)
+                return false;
+        }
+
+        for(var j in tabReclamJ2)
+        {
+            if(tabReclamJ2[j] === couleur)
+                return false;
+        }
+
+        if(joueur === Lyngk.Joueurs.JoueurUn)
+            tabReclamJ1.push(couleur);
+        else
+            tabReclamJ2.push(couleur);
     }
 /*
     this.couleur_coup_valide = function(src, dest)
