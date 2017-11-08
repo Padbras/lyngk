@@ -79,6 +79,34 @@ Lyngk.Engine = function () {
         }
     }
 
+    this.coup_valide = function (src, dest)
+    {
+        var source = this.get_case_coord(src); //plateau[i]
+        var destination = this.get_case_coord(dest); //plateau[j]
+
+        var colonneDest = destination.get_coord().get_c().charCodeAt(0) ;
+        var colonneSrc = source.get_coord().get_c().charCodeAt(0) ;
+
+        if(colonneDest === colonneSrc) // On bouge sur la même colonne
+        {
+            if(destination.get_coord().get_l() === source.get_coord().get_l() + 1 || destination.get_coord().get_l() === source.get_coord().get_l() - 1)
+                return true; // Deux déplacements autorisés : ligne supérieure ou inférieure
+            else return false;
+        }
+        else if(colonneDest === colonneSrc + 1) // Cas où la destination est sur la colonne suivant la source
+        {
+            if(destination.get_coord().get_l() === source.get_coord().get_l() + 1 || destination.get_coord().get_l() === source.get_coord().get_l())
+                return true;// Deux déplacements autorisés : ligne supérieure ou égale
+            else return false;
+        }
+        else if(colonneDest === colonneSrc - 1) // Cas où la destination est sur la colonne antérieure à la source
+        {
+            if(destination.get_coord().get_l() === source.get_coord().get_l() - 1 || destination.get_coord().get_l() === source.get_coord().get_l())
+                return true; // Deux déplacements autorisés : ligne égale ou inférieure
+            else return false;
+        }
+    }
+
     this.deplacer_pion = function(src, dest)
     {
         var source = this.get_case_coord(src); //plateau[i]
@@ -87,7 +115,7 @@ Lyngk.Engine = function () {
 
         var tmp =source.get_full_pile(); // pile de plateau de [i]
 
-        if(destination.get_taille_pile() !== 0)
+        if(destination.get_taille_pile() !== 0 && this.coup_valide(src, dest) === true)
         {
             for(var i = 0; i<tmp.length; i++)
             {
