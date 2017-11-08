@@ -161,3 +161,17 @@ LyngkTestCase.prototype.testHistoireDixNeuf = function(){
     jeu.deplacer_pion("B3","B5");
     assertTrue(jeu.get_case_coord("B3").get_color() === couleurB2 && jeu.get_case_coord("B5").get_color() === couleurB5 && jeu.get_case_coord("B5").get_taille_pile() === tailleB5 && jeu.get_case_coord("B3").get_taille_pile() === tailleB3);
 };
+
+LyngkTestCase.prototype.testHistoireVingt = function(){
+    var jeu = new Lyngk.Engine();
+    jeu.deplacer_pion("C1","C2");
+    jeu.deplacer_pion("C2","C3");
+    jeu.deplacer_pion("C3","C4");
+    jeu.deplacer_pion("C4","C5");
+    var couleurC5 = jeu.get_case_coord("C5").get_color();
+    var couleurC6 = jeu.get_case_coord("C6").get_color();
+    var tailleC6 = jeu.get_case_coord("C6").get_taille_pile();
+    jeu.deplacer_pion("C5","C6");
+
+    assertTrue(jeu.get_case_coord("C5").get_color() === couleurC5 && jeu.get_case_coord("C6").get_color() === couleurC6 && jeu.get_case_coord("C5").get_taille_pile() === 5 && jeu.get_case_coord("C6").get_taille_pile() === tailleC6);
+};

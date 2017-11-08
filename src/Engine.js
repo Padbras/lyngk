@@ -105,6 +105,7 @@ Lyngk.Engine = function () {
                 return true; // Deux déplacements autorisés : ligne égale ou inférieure
             else return false;
         }
+        else return false;
     }
 
     this.deplacer_pion = function(src, dest)
