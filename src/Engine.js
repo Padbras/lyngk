@@ -96,7 +96,7 @@ Lyngk.Engine = function () {
         {
             source.pop_pile();
         }
-        
+
     };
 
     this.getCase = function(i) {
