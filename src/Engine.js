@@ -193,4 +193,15 @@ Lyngk.Engine = function () {
     initPlateau();
     remplirPlateau();
 
+
+    Lyngk.Joueur = function (num) {
+
+        var private_id = num;
+
+       /* this.jouer_coup = function(src, dest)
+        {
+            jeu.deplacer_pion(src, dest);
+        }*/
+    };
+
 };
