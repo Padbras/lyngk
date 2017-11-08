@@ -113,7 +113,7 @@ Lyngk.Engine = function () {
         var source = this.get_case_coord(src); //plateau[i]
         var destination = this.get_case_coord(dest); //plateau[j]
 
-        if(source.get_taille_pile() === 1 && destination.get_taille_pile()>1)
+        if(source.get_taille_pile() < destination.get_taille_pile())
             return false;
 
         if((source.get_taille_pile() + destination.get_taille_pile())<=5)
