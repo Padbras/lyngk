@@ -245,3 +245,12 @@ LyngkTestCase.prototype.testHistoireVingtCinq = function(){
     jeu.coup_joueur("B2","B3");
     assertTrue(jeu.whose_turn() === 2);
 };
+
+
+LyngkTestCase.prototype.testHistoireVingtSix = function(){
+    var jeu = new Lyngk.Engine();
+    jeu.get_case_coord("A3").set_color(Lyngk.Color.BLUE);
+    jeu.reclamer_couleur(1,Lyngk.Color.BLUE);
+    jeu.coup_joueur("A3","B3");
+    assertTrue(jeu.whose_turn() === 2 && tabReclamJ1[0] === Lyngk.Color.BLUE);
+};
