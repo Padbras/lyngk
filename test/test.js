@@ -114,7 +114,7 @@ LyngkTestCase.prototype.testHistoireQuatorze = function(){
     var jeu = new Lyngk.Engine();
     assertTrue(jeu.getCase(0).get_couleur_pile() === jeu.getCase(0).get_color());
 };
-/*
+
 LyngkTestCase.prototype.testHistoireQuinze = function(){
     var jeu = new Lyngk.Engine();
     var couleur = jeu.get_case_coord("A3").get_color();
@@ -129,7 +129,7 @@ LyngkTestCase.prototype.testHistoireSeize = function(){
     var couleur = jeu.get_case_coord("B3").get_color();
     assertTrue(jeu.get_case_coord("B3").get_etat() === Lyngk.State.VACANT &&  jeu.get_case_coord("B2").get_color() === couleur && jeu.get_case_coord("B2").get_taille_pile() === 3);
 };
-*/
+
 
 LyngkTestCase.prototype.testHistoireDixSept = function(){
     var jeu = new Lyngk.Engine();
@@ -138,4 +138,15 @@ LyngkTestCase.prototype.testHistoireDixSept = function(){
     var couleur = jeu.get_case_coord("B3").get_color();
     var taille = jeu.get_case_coord("B3").get_taille_pile();
     assertTrue(jeu.get_case_coord("B2").get_etat() === Lyngk.State.VACANT &&  jeu.get_case_coord("B3").get_color() === couleur && jeu.get_case_coord("B3").get_taille_pile() === taille);
+};
+
+LyngkTestCase.prototype.testHistoireDixHuit = function(){
+    var jeu = new Lyngk.Engine();
+    jeu.deplacer_pion("B2","B3");
+    var couleurC2 = jeu.get_case_coord("C2").get_color();
+    var tailleC2 = jeu.get_case_coord("C2").get_taille_pile();
+    var couleurB3 = jeu.get_case_coord("B3").get_color();
+    var tailleB3 = jeu.get_case_coord("B3").get_taille_pile();
+    jeu.deplacer_pion("B3","C2");
+    assertTrue(jeu.get_case_coord("B3").get_color() === couleurB3 && jeu.get_case_coord("C2").get_color() === couleurC2 && jeu.get_case_coord("B3").get_taille_pile() === tailleB3 && jeu.get_case_coord("C2").get_taille_pile() === tailleC2);
 };
