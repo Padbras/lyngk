@@ -147,7 +147,13 @@ Lyngk.Engine = function () {
 
     this.coup_joueur = function(src,dest)
     {
-        this.deplacer_pion(src, dest);
+      var flag =  this.deplacer_pion(src, dest);
+
+      if(flag !== 10)
+      {
+
+          console.log(flag);
+      }
 
         if(tour_joueur === Lyngk.Joueurs.JoueurUn)
             tour_joueur = Lyngk.Joueurs.JoueurDeux;
@@ -221,7 +227,13 @@ Lyngk.Engine = function () {
             {
                 source.pop_pile();
             }
+
+            if(destination.get_etat() === Lyngk.State.FULL_STACK)
+                return destination.get_color();
+            else return 10;
         }
+
+
 
     };
 
