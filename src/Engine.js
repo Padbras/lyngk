@@ -123,7 +123,35 @@ Lyngk.Engine = function () {
 
 
     }
+/*
+    this.couleur_coup_valide = function(src, dest)
+    {
+        var cptCouleur = [0,0,0,0,0,0];
+        var source = this.get_case_coord(src); //plateau[i]
+        var destination = this.get_case_coord(dest); //plateau[j]
 
+        for(var i in source.get_full_pile())
+        {
+            cptCouleur[source.get_pile(i)]++;
+        }
+
+        for(var j in destination.get_full_pile())
+        {
+            cptCouleur[destination.get_pile(j)]++;
+        }
+
+        for(var k in cptCouleur)
+        {
+            console.log(cptCouleur[k]);
+            if(cptCouleur[k]>1 && k!== 5)
+                return false;
+        }
+        console.log("---------");
+        return true;
+
+
+    }
+*/
     this.deplacer_pion = function(src, dest)
     {
         var source = this.get_case_coord(src); //plateau[i]
@@ -132,7 +160,7 @@ Lyngk.Engine = function () {
 
         var tmp =source.get_full_pile(); // pile de plateau de [i]
 
-        if(destination.get_taille_pile() !== 0 && this.coup_valide(src, dest) === true && this.taille_coup_valide(src, dest) === true)
+        if(destination.get_taille_pile() !== 0 && this.coup_valide(src, dest) === true && this.taille_coup_valide(src, dest) === true/* && this.couleur_coup_valide(src, dest) === true*/)
         {
             for(var i = 0; i<tmp.length; i++)
             {
