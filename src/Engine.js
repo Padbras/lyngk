@@ -108,6 +108,22 @@ Lyngk.Engine = function () {
         else return false;
     }
 
+    this.taille_coup_valide = function(src, dest)
+    {
+        var source = this.get_case_coord(src); //plateau[i]
+        var destination = this.get_case_coord(dest); //plateau[j]
+
+        if(source.get_taille_pile() === 1 && destination.get_taille_pile()>1)
+            return false;
+
+        if((source.get_taille_pile() + destination.get_taille_pile())<=5)
+            return true;
+        else return false;
+
+
+
+    }
+
     this.deplacer_pion = function(src, dest)
     {
         var source = this.get_case_coord(src); //plateau[i]
@@ -116,7 +132,7 @@ Lyngk.Engine = function () {
 
         var tmp =source.get_full_pile(); // pile de plateau de [i]
 
-        if(destination.get_taille_pile() !== 0 && this.coup_valide(src, dest) === true && (source.get_taille_pile() + destination.get_taille_pile())<=5)
+        if(destination.get_taille_pile() !== 0 && this.coup_valide(src, dest) === true && this.taille_coup_valide(src, dest) === true)
         {
             for(var i = 0; i<tmp.length; i++)
             {
