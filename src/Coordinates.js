@@ -1,70 +1,68 @@
 "use strict";
-Lyngk.CoordValides = [[3,3],[2,5],[1,7],[2,7],[2,8],[3,8],[3,9],[5,8],[7,7]];
-
-Lyngk.coordValides = [[3,3],[2,5],[1,7],[2,7],[2,8],[3,8],[3,9],[5,8],[7,7]];
+Lyngk.valid_coordinates = [[3, 3], [2, 5], [1, 7], [2, 7], [2, 8], [3, 8], [3, 9], [5, 8], [7, 7]];
 
 
-Lyngk.Coordinates = function (c, l) {
+Lyngk.Coordinates = function (column, line) {
 
-    var private_c;
-    var private_l;
+    var private_column;
+    var private_line;
 
-    var init = function (c, l) {
-        private_c = c;
-        private_l = l;
+    var init = function (column, line) {
+        private_column = column;
+        private_line = line;
     };
 
-    init(c, l);
+    init(column, line);
 
-    this.valide = function()
-    {
-        return (Lyngk.coordValides[c.charCodeAt(0) - 'A'.charCodeAt(0)][0] <= l && l <= Lyngk.coordValides[c.charCodeAt(0) - 'A'.charCodeAt(0)][1]);
 
+    this.valid_coordinate = function () {
+        var column_number = Lyngk.valid_coordinates[column.charCodeAt(0) - 'A'.charCodeAt(0)];
+        return (column_number[0] <= line && line <= column_number[1]);
     };
 
-    this.sommeCoord = function()
-    {
-        var somme = 0;
 
-        for(var i in Lyngk.CoordValides)
-        {
-          somme += Lyngk.CoordValides[i][1] - Lyngk.CoordValides[i][0] + 1;
+    this.somme_coord = function () {
+        var sum = 0;
+
+        for (var coord_count in Lyngk.valid_coordinates) {
+            sum += Lyngk.valid_coordinates[coord_count][1] - Lyngk.valid_coordinates[coord_count][0] + 1;
         }
-        return somme;
-    }
+        return sum;
+    };
 
-    this.toString = function()
-    {
-        if(this.valide() === false)
+    this.to_string = function () {
+        if (this.valid_coordinate() === false) {
             return "invalid";
-        else return ""+ c + l;
+        }
 
-    }
+        else {
+            return "" + column + line;
+        }
+    };
 
-    this.clonage = function()
-    {
+    this.clone = function () {
+        return new Lyngk.Coordinates(private_column, private_line);
+    };
 
-        return new Lyngk.Coordinates(private_c, private_l);
-    }
-
-    this.comparaison = function(coord) {
-
-        if(private_c === coord.get_c() && private_l === coord.get_l())
+    this.compare = function (coord) {
+        if (private_column === coord.get_column() && private_line === coord.get_line()) {
             return true;
-        else return false;
-    }
+        }
+        else {
+            return false;
+        }
+    };
 
-    this.get_c = function() {
-        return private_c;
-    }
+    this.get_column = function () {
+        return private_column;
+    };
 
-    this.get_l = function() {
-        return private_l;
-    }
+    this.get_line = function () {
+        return private_line;
+    };
 
-    this.hash = function()
-    {
-       var hashage = parseInt("" + (private_c.charCodeAt(0)-64) + private_l) ;
-       return hashage;
-    }
+    this.hash = function () {
+        var hash_result = parseInt("" + (private_column.charCodeAt(0) - 64) + private_line);
+        return hash_result;
+    };
 };
